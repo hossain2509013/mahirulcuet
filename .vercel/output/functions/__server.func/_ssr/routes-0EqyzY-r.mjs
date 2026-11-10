@@ -1,10 +1,12 @@
 import { b as require_jsx_runtime } from "../_libs/@tanstack/react-router+[...].mjs";
 import { a as Mail, i as MapPin, n as Phone, o as ArrowUpRight, r as MessageCircle } from "../_libs/lucide-react.mjs";
-//#region node_modules/.nitro/vite/services/ssr/assets/routes-CPgdb9s2.js
+//#region node_modules/.nitro/vite/services/ssr/assets/routes-0EqyzY-r.js
 var import_jsx_runtime = require_jsx_runtime();
 var FORM = "https://docs.google.com/forms/d/e/1FAIpQLSfcaAlyx5id8jnOHG4LsNZ6Hg3iLvmt9xPuQ7VwEAve0goJJA/viewform";
 var WHATSAPP = "https://wa.me/8801777888446";
-var FACEBOOK = "https://www.facebook.com/profile.php?id=61595765411384";
+var PAGE = "https://www.facebook.com/profile.php?id=61595765411384";
+var OWNER = "https://www.facebook.com/mahirul.hasan.334";
+var SECONDARY = "https://www.facebook.com/hossain2509013/";
 var SPECS = [
 	["Capacity", "750 ml"],
 	["Material", "Premium aluminium"],
@@ -24,6 +26,7 @@ function Home() {
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Bottle, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Range, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Order, {}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Faq, {}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Contact, {})
 			] }),
 			/* @__PURE__ */ (0, import_jsx_runtime.jsx)(Footer, {})
@@ -64,7 +67,12 @@ function Header() {
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 							href: "#order",
 							className: "hover:text-ink",
-							children: "How to order"
+							children: "Order"
+						}),
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+							href: "#faq",
+							className: "hover:text-ink",
+							children: "FAQ"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 							href: "#contact",
@@ -85,7 +93,7 @@ function Header() {
 				})
 			]
 		}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
-			className: "mx-auto flex max-w-6xl gap-5 overflow-x-auto px-5 pb-3 text-sm text-muted md:hidden",
+			className: "mx-auto flex w-full min-w-0 max-w-6xl gap-5 overflow-x-auto px-5 pb-3 text-sm text-muted md:hidden",
 			children: [
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 					href: "#bottle",
@@ -97,10 +105,17 @@ function Header() {
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 					href: "#order",
-					children: "How to order"
+					className: "shrink-0",
+					children: "Order"
+				}),
+				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+					href: "#faq",
+					className: "shrink-0",
+					children: "FAQ"
 				}),
 				/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
 					href: "#contact",
+					className: "shrink-0",
 					children: "Contact"
 				})
 			]
@@ -171,9 +186,9 @@ function Bottle() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("div", {
 					className: "overflow-hidden rounded-2xl bg-sand",
 					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						src: "/images/cuet-desk.jpg",
+						src: "/images/cuet-bottle.jpg",
 						alt: "White 750 ml CUET aluminium bottle with a carabiner, on a wooden desk",
-						className: "mx-auto w-full max-w-sm"
+						className: "mx-auto h-auto max-h-[68vh] w-full object-contain"
 					})
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
 					className: "mt-3 text-sm text-muted",
@@ -235,10 +250,6 @@ function Bottle() {
 								"aria-hidden": "true"
 							})]
 						})]
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-						className: "mt-4 max-w-xl text-sm leading-relaxed text-muted",
-						children: "প্রি-অর্ডার করতে প্রতি Bottle-এর জন্য 100৳ Advance Payment করতে হবে। পরবর্তীতে বাকি 250৳ Payment করতে হবে।"
 					})
 				]
 			})]
@@ -256,10 +267,10 @@ function Bottle() {
 				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
 					src: "/images/cuet-arrived.jpg",
 					alt: "Two finished CUET bottles standing with their white custom box",
-					className: "mx-auto w-full max-w-sm"
+					className: "h-auto max-h-[62vh] w-full object-contain object-center"
 				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
 					className: "px-5 py-4 text-sm text-sand",
-					children: "In hand. Mahirul says the feel is better than expected, and delivery of placed orders starts within the next few days."
+					children: "Finished bottles with the custom box. Delivery of placed orders starts within the next few days."
 				})]
 			})]
 		})]
@@ -271,71 +282,57 @@ function Range() {
 		className: "border-t border-sand bg-sand/60",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto max-w-6xl px-5 py-16 md:py-24",
-			children: [
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-					className: "max-w-2xl",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "text-sm font-medium tracking-widest text-muted uppercase",
-							children: "The bench"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
-							className: "mt-3 font-display text-4xl leading-tight font-bold md:text-5xl",
-							children: "Custom bottles and named keyrings"
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-							className: "mt-4 text-lg leading-relaxed text-muted",
-							children: "The shop starts with water bottles. The cover shows the wider idea: bottles you can put a name on, and keyrings cut with initials. Those pieces are made to order. There is no public price yet — ask on WhatsApp."
-						})
-					]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-					className: "mt-10 grid gap-4 md:grid-cols-3",
-					children: [
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-							className: "rounded-2xl bg-paper p-6",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-display text-2xl font-bold",
-								children: "Bottles"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-2 text-muted",
-								children: "Stainless steel, matte black, and glass with a wood lid. The matte bottle in the cover reads EXPLORE."
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-							className: "rounded-2xl bg-paper p-6",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-display text-2xl font-bold",
-								children: "Keyrings"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-2 text-muted",
-								children: "Leather straps with a name, a wood disc, and a small acrylic tag. Initials such as A.K. and S.R. are already on the samples."
-							})]
-						}),
-						/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
-							className: "rounded-2xl bg-paper p-6",
-							children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
-								className: "font-display text-2xl font-bold",
-								children: "Coming next"
-							}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
-								className: "mt-2 text-muted",
-								children: "More everyday essentials are planned. Follow the page for the next reveal."
-							})]
-						})
-					]
-				}),
-				/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("figure", {
-					className: "mt-10 overflow-hidden rounded-2xl bg-paper",
-					children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("img", {
-						src: "/images/cuet-duck.jpg",
-						alt: "A duck on grass holding the CUET bottle, with the line: put the phone down and drink some water",
-						className: "mx-auto w-full max-w-lg"
-					}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("figcaption", {
-						className: "px-5 py-4 text-sm text-muted",
-						children: "Stay hydrated, stay classy."
-					})]
-				})
-			]
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "max-w-2xl",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "text-sm font-medium tracking-widest text-muted uppercase",
+						children: "Custom work"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+						className: "mt-3 font-display text-4xl leading-tight font-bold md:text-5xl",
+						children: "Named bottles and keyrings"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+						className: "mt-4 text-lg leading-relaxed text-muted",
+						children: "Water bottles are in production now. Stainless, matte, and glass bottles, plus keyrings with a name or initials, are made to order. Ask the shop on WhatsApp for a quote — those prices are not listed yet."
+					})
+				]
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+				className: "mt-10 grid gap-4 md:grid-cols-3",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+						className: "rounded-2xl bg-paper p-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-display text-2xl font-bold",
+							children: "Bottles"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-2 text-muted",
+							children: "Stainless steel, matte black, and glass with a wood lid. The matte bottle in the cover reads EXPLORE."
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+						className: "rounded-2xl bg-paper p-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-display text-2xl font-bold",
+							children: "Keyrings"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-2 text-muted",
+							children: "Leather straps with a name, a wood disc, and a small acrylic tag. Initials such as A.K. and S.R. are already on the samples."
+						})]
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("li", {
+						className: "rounded-2xl bg-paper p-6",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+							className: "font-display text-2xl font-bold",
+							children: "Coming next"
+						}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+							className: "mt-2 text-muted",
+							children: "More everyday pieces are planned. Updates go on the Mahirul page."
+						})]
+					})
+				]
+			})]
 		})
 	});
 }
@@ -355,7 +352,7 @@ function Order() {
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 							className: "mt-3 font-display text-4xl leading-tight font-bold md:text-5xl",
-							children: "Three steps. One bottle."
+							children: "How an order works"
 						}),
 						/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 							className: "mt-4 text-lg leading-relaxed text-sand",
@@ -435,77 +432,159 @@ function Order() {
 						target: "_blank",
 						rel: "noreferrer",
 						className: "inline-flex min-h-11 items-center gap-2 rounded-full border border-paper/20 px-5 text-sm font-medium text-paper",
-						children: "Ask on WhatsApp"
+						children: "Order on WhatsApp"
 					})]
 				})
 			]
 		})
 	});
 }
+function Faq() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("section", {
+		id: "faq",
+		className: "mx-auto max-w-6xl px-5 py-16 md:py-24",
+		children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+			className: "max-w-2xl",
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
+				className: "text-sm font-medium tracking-widest text-muted uppercase",
+				children: "FAQ"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
+				className: "mt-3 font-display text-4xl leading-tight font-bold md:text-5xl",
+				children: "Before you pay"
+			})]
+		}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dl", {
+			className: "mt-10 grid gap-4",
+			children: FAQ.map((item) => /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "rounded-2xl bg-sand px-6 py-5",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("dt", {
+					className: "font-display text-2xl font-bold",
+					children: item.q
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("dd", {
+					className: "mt-3 max-w-3xl leading-relaxed",
+					children: item.a
+				})]
+			}, item.q))
+		})]
+	});
+}
+var FAQ = [
+	{
+		q: "Who can order?",
+		a: "The CUET bottle form is for CUET students. It asks for a student ID. Custom bottles and keyrings are separate — message the shop on WhatsApp."
+	},
+	{
+		q: "What does the ৳100 cover?",
+		a: "It is the advance on the ৳350 price, not an extra fee. Pay ৳100 for each bottle, put the transaction ID on the form, and use your student ID as the reference."
+	},
+	{
+		q: "When is the remaining ৳250 due?",
+		a: "Later. After the pre-order is in, the shop tells you when. That ৳250 is the rest of the ৳350."
+	},
+	{
+		q: "How does delivery work?",
+		a: "Orders already placed start going out within the next few days. The shop confirms the details on WhatsApp. No separate delivery charge is listed."
+	}
+];
 function Contact() {
 	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("section", {
 		id: "contact",
-		className: "mx-auto max-w-6xl px-5 py-16 md:py-24",
+		className: "border-t border-sand",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-			className: "grid gap-10 md:grid-cols-12",
+			className: "mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-12 md:py-24",
 			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
-				className: "md:col-span-5",
+				className: "md:col-span-4",
 				children: [
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "text-sm font-medium tracking-widest text-muted uppercase",
-						children: "About"
+						children: "Contact"
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h2", {
 						className: "mt-3 font-display text-4xl leading-tight font-bold",
-						children: "Made for everyday."
+						children: "Orders go to the shop."
 					}),
 					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", {
 						className: "mt-4 text-lg leading-relaxed text-muted",
-						children: "Mahirul picks everyday essentials, small accessories, and useful lifestyle pieces. Water bottles are first. The goal is simple: thoughtful design, and a buying experience you can trust."
+						children: "Suggestions, and anything that is not an order, go to Hossain."
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("p", {
+						className: "mt-6 flex items-center gap-2 text-sm text-muted",
+						children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
+							className: "size-4 text-burgundy",
+							"aria-hidden": "true"
+						}), "Chattogram · 4203"]
 					})
 				]
-			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
-				className: "grid gap-3 md:col-span-7",
-				children: [
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageCircle, {
-							className: "size-5",
-							"aria-hidden": "true"
+			}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
+				className: "grid gap-8 md:col-span-8",
+				children: [/* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "font-display text-xl font-bold",
+					children: "Orders · the shop"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("ul", {
+					className: "mt-3 grid gap-3 sm:grid-cols-2",
+					children: [
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
+							icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MessageCircle, {
+								className: "size-5",
+								"aria-hidden": "true"
+							}),
+							label: "WhatsApp · orders",
+							value: "01777-888446",
+							href: WHATSAPP
 						}),
-						label: "WhatsApp",
-						value: "01777-888446",
-						href: WHATSAPP
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
-							className: "size-5",
-							"aria-hidden": "true"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
+							icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Phone, {
+								className: "size-5",
+								"aria-hidden": "true"
+							}),
+							label: "Call · orders",
+							value: "01836-187243",
+							href: "tel:+8801836187243"
 						}),
-						label: "Call",
-						value: "01836-187243",
-						href: "tel:+8801836187243"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
-							className: "size-5",
-							"aria-hidden": "true"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
+							icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Mail, {
+								className: "size-5",
+								"aria-hidden": "true"
+							}),
+							label: "Email · orders",
+							value: "mahirulh50@gmail.com",
+							href: "mailto:mahirulh50@gmail.com"
 						}),
-						label: "Email",
-						value: "mahirulh50@gmail.com",
-						href: "mailto:mahirulh50@gmail.com"
-					}),
-					/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
-						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(MapPin, {
-							className: "size-5",
-							"aria-hidden": "true"
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
+							icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FacebookIcon, {}),
+							label: "Official page · orders",
+							value: "Mahirul",
+							href: PAGE
 						}),
-						label: "Place",
-						value: "Chattogram · 4203",
-						href: FACEBOOK
+						/* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
+							icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FacebookIcon, {}),
+							label: "Mahirul Hasan · owner",
+							value: "Product questions",
+							href: OWNER
+						})
+					]
+				})] }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", { children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("h3", {
+					className: "font-display text-xl font-bold",
+					children: "Suggestions · Hossain"
+				}), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("ul", {
+					className: "mt-3 grid gap-3",
+					children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(ContactRow, {
+						icon: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(FacebookIcon, {}),
+						label: "Hossain · suggestions",
+						value: "Feedback and other enquiries",
+						href: SECONDARY
 					})
-				]
+				})] })]
 			})]
 		})
+	});
+}
+function FacebookIcon() {
+	return /* @__PURE__ */ (0, import_jsx_runtime.jsx)("svg", {
+		viewBox: "0 0 24 24",
+		className: "size-5",
+		"aria-hidden": "true",
+		fill: "currentColor",
+		children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)("path", { d: "M14.2 8.4V6.9c0-.6.4-.9 1-.9H17V3.5h-1.9C12.4 3.5 11.2 4.7 11.2 6.8v1.6H9.4v2.5h1.8V20h3.2v-9.1h2.1l.3-2.5h-2.6Z" })
 	});
 }
 function ContactRow({ icon, label, value, href }) {
@@ -531,12 +610,31 @@ function Footer() {
 		className: "border-t border-sand",
 		children: /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("div", {
 			className: "mx-auto flex max-w-6xl flex-wrap items-center justify-between gap-4 px-5 py-8 text-sm text-muted",
-			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Mahirul · Custom bottles & keyrings" }), /* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
-				href: FACEBOOK,
-				target: "_blank",
-				rel: "noreferrer",
-				className: "underline",
-				children: "Facebook page"
+			children: [/* @__PURE__ */ (0, import_jsx_runtime.jsx)("p", { children: "Mahirul · Custom bottles & keyrings · Chattogram" }), /* @__PURE__ */ (0, import_jsx_runtime.jsxs)("nav", {
+				className: "flex flex-wrap gap-x-5 gap-y-2",
+				children: [
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: PAGE,
+						target: "_blank",
+						rel: "noreferrer",
+						className: "underline",
+						children: "Shop page"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: OWNER,
+						target: "_blank",
+						rel: "noreferrer",
+						className: "underline",
+						children: "Mahirul Hasan"
+					}),
+					/* @__PURE__ */ (0, import_jsx_runtime.jsx)("a", {
+						href: SECONDARY,
+						target: "_blank",
+						rel: "noreferrer",
+						className: "underline",
+						children: "Hossain"
+					})
+				]
 			})]
 		})
 	});

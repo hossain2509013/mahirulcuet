@@ -29,6 +29,7 @@ function Home() {
         <Bottle />
         <Range />
         <Order />
+        <Faq />
         <Contact />
       </main>
       <Footer />
@@ -52,7 +53,10 @@ function Header() {
             Custom
           </a>
           <a href="#order" className="hover:text-ink">
-            How to order
+            Order
+          </a>
+          <a href="#faq" className="hover:text-ink">
+            FAQ
           </a>
           <a href="#contact" className="hover:text-ink">
             Contact
@@ -71,8 +75,15 @@ function Header() {
       <nav className="mx-auto flex w-full min-w-0 max-w-6xl gap-5 overflow-x-auto px-5 pb-3 text-sm text-muted md:hidden">
         <a href="#bottle">CUET bottle</a>
         <a href="#range">Custom</a>
-        <a href="#order">How to order</a>
-        <a href="#contact">Contact</a>
+        <a href="#order" className="shrink-0">
+          Order
+        </a>
+        <a href="#faq" className="shrink-0">
+          FAQ
+        </a>
+        <a href="#contact" className="shrink-0">
+          Contact
+        </a>
       </nav>
     </header>
   );
@@ -130,9 +141,9 @@ function Bottle() {
         <figure className="md:col-span-5">
           <div className="overflow-hidden rounded-2xl bg-sand">
             <img
-              src="/images/cuet-desk.jpg"
+              src="/images/cuet-bottle.jpg"
               alt="White 750 ml CUET aluminium bottle with a carabiner, on a wooden desk"
-              className="mx-auto w-full max-w-sm"
+              className="mx-auto h-auto max-h-[68vh] w-full object-contain"
             />
           </div>
           <figcaption className="mt-3 text-sm text-muted">
@@ -179,9 +190,6 @@ function Bottle() {
               <ArrowUpRight className="size-4" aria-hidden="true" />
             </a>
           </div>
-          <p className="mt-4 max-w-xl text-sm leading-relaxed text-muted">
-            প্রি-অর্ডার করতে প্রতি Bottle-এর জন্য 100৳ Advance Payment করতে হবে। পরবর্তীতে বাকি 250৳ Payment করতে হবে।
-          </p>
         </div>
       </div>
 
@@ -197,7 +205,7 @@ function Bottle() {
           <img
             src="/images/cuet-arrived.jpg"
             alt="Two finished CUET bottles standing with their white custom box"
-            className="mx-auto w-full max-w-sm"
+            className="h-auto max-h-[62vh] w-full object-contain object-center"
           />
           <figcaption className="px-5 py-4 text-sm text-sand">
             Finished bottles with the custom box. Delivery of placed orders starts within
@@ -307,7 +315,7 @@ function Order() {
             rel="noreferrer"
             className="inline-flex min-h-11 items-center gap-2 rounded-full border border-paper/20 px-5 text-sm font-medium text-paper"
           >
-            Ask on WhatsApp
+            Order on WhatsApp
           </a>
         </div>
       </div>
@@ -315,18 +323,57 @@ function Order() {
   );
 }
 
+function Faq() {
+  return (
+    <section id="faq" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
+      <div className="max-w-2xl">
+        <p className="text-sm font-medium tracking-widest text-muted uppercase">FAQ</p>
+        <h2 className="mt-3 font-display text-4xl leading-tight font-bold md:text-5xl">
+          Before you pay
+        </h2>
+      </div>
+      <dl className="mt-10 grid gap-4">
+        {FAQ.map((item) => (
+          <div key={item.q} className="rounded-2xl bg-sand px-6 py-5">
+            <dt className="font-display text-2xl font-bold">{item.q}</dt>
+            <dd className="mt-3 max-w-3xl leading-relaxed">{item.a}</dd>
+          </div>
+        ))}
+      </dl>
+    </section>
+  );
+}
+
+const FAQ = [
+  {
+    q: "Who can order?",
+    a: "The CUET bottle form is for CUET students. It asks for a student ID. Custom bottles and keyrings are separate — message the shop on WhatsApp.",
+  },
+  {
+    q: "What does the ৳100 cover?",
+    a: "It is the advance on the ৳350 price, not an extra fee. Pay ৳100 for each bottle, put the transaction ID on the form, and use your student ID as the reference.",
+  },
+  {
+    q: "When is the remaining ৳250 due?",
+    a: "Later. After the pre-order is in, the shop tells you when. That ৳250 is the rest of the ৳350.",
+  },
+  {
+    q: "How does delivery work?",
+    a: "Orders already placed start going out within the next few days. The shop confirms the details on WhatsApp. No separate delivery charge is listed.",
+  },
+];
+
 function Contact() {
   return (
-    <section id="contact" className="mx-auto max-w-6xl px-5 py-16 md:py-24">
-      <div className="grid gap-12 md:grid-cols-12">
+    <section id="contact" className="border-t border-sand">
+      <div className="mx-auto grid max-w-6xl gap-12 px-5 py-16 md:grid-cols-12 md:py-24">
         <div className="md:col-span-4">
           <p className="text-sm font-medium tracking-widest text-muted uppercase">Contact</p>
           <h2 className="mt-3 font-display text-4xl leading-tight font-bold">
-            Orders, suggestions, anything else.
+            Orders go to the shop.
           </h2>
           <p className="mt-4 text-lg leading-relaxed text-muted">
-            Bottle orders go to the shop. For suggestions, questions, or anything that is
-            not an order, message Hossain.
+            Suggestions, and anything that is not an order, go to Hossain.
           </p>
           <p className="mt-6 flex items-center gap-2 text-sm text-muted">
             <MapPin className="size-4 text-burgundy" aria-hidden="true" />
@@ -335,47 +382,47 @@ function Contact() {
         </div>
         <div className="grid gap-8 md:col-span-8">
           <div>
-            <h3 className="font-display text-xl font-bold">Shop</h3>
+            <h3 className="font-display text-xl font-bold">Orders · the shop</h3>
             <ul className="mt-3 grid gap-3 sm:grid-cols-2">
               <ContactRow
                 icon={<MessageCircle className="size-5" aria-hidden="true" />}
-                label="WhatsApp"
+                label="WhatsApp · orders"
                 value="01777-888446"
                 href={WHATSAPP}
               />
               <ContactRow
                 icon={<Phone className="size-5" aria-hidden="true" />}
-                label="Call"
+                label="Call · orders"
                 value="01836-187243"
                 href="tel:+8801836187243"
               />
               <ContactRow
                 icon={<Mail className="size-5" aria-hidden="true" />}
-                label="Email"
+                label="Email · orders"
                 value="mahirulh50@gmail.com"
                 href="mailto:mahirulh50@gmail.com"
               />
               <ContactRow
                 icon={<FacebookIcon />}
-                label="Official page"
+                label="Official page · orders"
                 value="Mahirul"
                 href={PAGE}
+              />
+              <ContactRow
+                icon={<FacebookIcon />}
+                label="Mahirul Hasan · owner"
+                value="Product questions"
+                href={OWNER}
               />
             </ul>
           </div>
           <div>
-            <h3 className="font-display text-xl font-bold">People</h3>
+            <h3 className="font-display text-xl font-bold">Suggestions · Hossain</h3>
             <ul className="mt-3 grid gap-3">
               <ContactRow
                 icon={<FacebookIcon />}
-                label="Mahirul Hasan · personal"
-                value="Product questions to the owner"
-                href={OWNER}
-              />
-              <ContactRow
-                icon={<FacebookIcon />}
-                label="Hossain · secondary contact"
-                value="Suggestions and other enquiries"
+                label="Hossain · suggestions"
+                value="Feedback and other enquiries"
                 href={SECONDARY}
               />
             </ul>
